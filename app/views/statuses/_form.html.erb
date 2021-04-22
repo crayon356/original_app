@@ -1,0 +1,24 @@
+<%= form_with model: @status, local: true do |f|%>
+  <div class="field">
+    <%= f.label :height, "身長" %><br />
+    <%= f.text_field :height, id:"height" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight, "体重" %><br />
+    <%= f.text_field :weight, id:"weight", class: :form__text %>
+  </div>
+
+  <div class="field" id="bmi">
+    <%= f.label :BMI, "BMI" %><br />
+    <span></span>
+  </div>
+
+  <div class="right_weight", id="right_weight">
+  <p></p>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
